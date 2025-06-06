@@ -8,6 +8,13 @@ import utils.SessionFactoryUtil;
 import java.util.List;
 
 public class UserDao {
+    public UserDao(SessionFactoryUtil sessionFactoryUtil) {
+    }
+
+    public UserDao() {
+
+    }
+
     public User findById(int id) {
         return SessionFactoryUtil.getSessionFactory().openSession().get(User.class, id);
     }
